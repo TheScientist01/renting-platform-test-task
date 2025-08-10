@@ -19,7 +19,7 @@ const notifyError = async (message) => {
  */
 const errorHandler = (error) => {
   try {
-    if (typeof error !== 'string') {sss
+    if (typeof error !== 'string') {
       console.error('Invalid error format. Expected a string.');
       return;
     }

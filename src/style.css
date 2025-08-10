@@ -588,9 +588,17 @@ footer div span {
   color: var(--text-quaternary);
 }
 
+.modal-title {
+  color: var(--text-primary);
+}
+
 .modal-content {
   background-color: var(--bg-primary);
   border-color: var(--border-color);
+}
+
+.modal-body {
+  color: var(--text-primary);
 }
 
 .modal-header {
@@ -603,6 +611,20 @@ footer div span {
 
 .navbar-brand {
   color: var(--text-primary) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.add-note-btn {
+  height: full;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px dashed var(--border-color);
+  color: var(--text-primary);
+  font-size: 20px;
 }
 
 /* Start media query */

@@ -9,6 +9,7 @@ import Loading from "./pages/Header";
 import Partners from "./pages/Partners";
 import Properties from "./pages/Properties";
 import Subscribe from "./pages/Subscribe";
+import Notes from "./pages/Notes";
 
 // Create Theme Context
 const ThemeContext = createContext();
@@ -22,7 +23,7 @@ export const useTheme = () => {
 };
 
 function App() {
-  // Initialize theme from localStorage or default to 'dark'
+  // Initialize theme from localStorage or default to dark
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
     return savedTheme || 'dark';
@@ -51,6 +52,7 @@ function App() {
         <Developers />
         <Join />
         <Subscribe />
+        <Notes />
         <Footer />
       </BrowserRouter>
     </ThemeContext.Provider>
