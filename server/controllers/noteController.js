@@ -11,6 +11,13 @@ const notes=[
     },
 ]
 
+const generateId = () => {
+    if (notes.length === 0) {
+        return 1;
+    }
+    const maxId = Math.max(...notes.map(note => note.id));
+    return maxId + 1;
+}
 
 exports.getAllNotes = async (req, res) => {
     try {
@@ -38,7 +45,7 @@ exports.createNote = async (req, res) => {
             return res.status(400).json({ message: "Title and content are required" });
         }
         const note = {
-            id: notes.length + 1,
+            id: generateId(),
             title: req.body.title,
             content: req.body.content,
         }
